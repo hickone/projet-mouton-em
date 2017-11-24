@@ -26,7 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         //$spends = Spend::all();
-        $spends = Spend::orderBy('created_at', 'DESC')->paginate(env('PAGINATE', 3));
+        $spends = Spend::orderBy('pay_date', 'DESC')->paginate(env('PAGINATE', 3));
         $users = User::all();
 
         //echo $spends;

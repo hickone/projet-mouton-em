@@ -33,7 +33,6 @@
                                             <td>{{$spend->price}}</td>
                                             <td>{{$spend->pay_date}}</td>
                                         </tr>
-
                                     @endforeach
                                     @endforeach
 

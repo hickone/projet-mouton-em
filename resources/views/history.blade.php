@@ -20,12 +20,14 @@
                                 </thead>
                                 <tbody>
                                 @foreach($spends as $spend)
-                                    <tr>
-                                        <td>{{$spend->id}}</td>
-                                        <td>{{$spend->title}}</td>
-                                        <td>{{$spend->price}}</td>
-                                        <td>{{$spend->pay_date}}</td>
-                                    </tr>
+                                    @foreach($spend->users as $user)
+                                        <tr>
+                                            <td>{{$user->pseudo}}</td>
+                                            <td>{{$spend->title}}</td>
+                                            <td>{{$spend->price}}</td>
+                                            <td>{{$spend->pay_date}}</td>
+                                        </tr>
+                                    @endforeach
                                 @endforeach
                                 </tbody>
                             </table>
